@@ -1,0 +1,8 @@
+
+    req:
+        campose_extractor_kit
+        binaryimg_extractor_kit
+        ocr_kit 
+        env_test_kit 
+        crawlers_kit 
+        neural_computing_kit
