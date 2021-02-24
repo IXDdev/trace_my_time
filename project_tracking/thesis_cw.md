@@ -60,34 +60,35 @@
             poisson recon 
                 not accurate 
             skip-more effecient rendering of the points serfels: clod rendering 
-    todo:(recent)
-        core: 
-            reading: know about fitting functions in a obj or similar file, fit to surface/ plane 
-                et 4h 
-            quick test on cloud rendering 
+            skip-quick test on cloud rendering 
                 merege the clod rendering 
                 with Fenek renderer 
-            add deletion support: at least for vertices 
+    todo/req:
+        core workflow: 
+            quick test pcl/other libs feature functions for point clouds 
+            reading: learn fitting functions in a obj or similar file, fit to surface/ plane 
+                et 4h 
+            point cloud editing support in vr 
+                add deletion support: at least for vertices 
+                addition is also strightfow.
             port old functions to current framework, from vr_scanning, depre. 
                 rgbd camera related ... 
                 marking 
                 region growing 
                 ...
-            more effecient/ enhancement 
-            quick test pcl/other libs  feature functions for point clouds 
             write faces/meshes/... to files 
-            point cloud editing 
         gui 
             import point clouds with gui? 
             fix gui stuff, support infinite btns 
             load images, image panel 
             load dir within vr 
         in vr:  
-            starting pose of the rgbd cam 
             click a point and set it as floor, fixed transformation translate 
+            correct starting pose of the rgbd cam 
         effecient:
             parallel processing support 
-    todo/req:  
+            more effecient/ enhancement in draw calls 
+    todo/req:(old) 
         trival stuffs:    
         //
         scanning setup
