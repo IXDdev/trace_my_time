@@ -4,6 +4,9 @@
             point cloud merging 
 
     req:
+        mixed/trivial  
+            image stiching of the panoramas 
+
         quickdemo 
             ok-feature extraction 
             ok-feature points visualization 
@@ -29,11 +32,12 @@
                 3. uv computation
                 4. export
          
-        points 
+        >points processing 
             points cleaning with vr 
             points cleaning for quick test 
+            points classification 
 
-        surface recon
+        >surface recon
             with realitycapture workflow 
             with Osr workflow 
             
@@ -79,3 +83,6 @@
             et 1h 
             climbing game
             et 1h   
+
+        IMEngine_vk vr experience 
+            ...

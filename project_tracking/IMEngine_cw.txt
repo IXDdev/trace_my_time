@@ -1,0 +1,70 @@
+
+    goal: prepare data for cgv/unity fw 
+    structure: 
+        render 2d overlay: nanovg
+        render 3d: opengl3+ 
+        window: modified glfw  
+    done with this fw: 
+
+    req:
+        ------ PrimitiveRenderers ---------
+            // may have to use geometry shader 
+            triangle renderer: randomlized triangles 
+            point renderer 
+            clod renderer 
+            box renderer
+            line renderer 
+            sphere renderer 
+            surfel renderer 
+            rounded cone renderer 
+            textured mesh renderer 
+            surface renderer 
+                materials, ray traced 
+            volume renderer 
+            arrow renderer 
+            ellipsoid renderer
+            tube renderer 
+        
+        ------ PCL lib 
+            ok-load point cloud and count 
+            merge examples 
+                https://github.com/PointCloudLibrary/pcl/tree/master/examples
+                https://pcl.readthedocs.io/projects/tutorials/en/latest/region_growing_rgb_segmentation.html#region-growing-rgb-segmentation
+            feature vis with pcl vtk viewer 
+            openvr integration 
+            custom rendering of the clouds, ref cgv? 
+
+        ------ OpenCV Lib 
+            Harris2d
+            render images with the fw:
+                load shaders 
+                load textures 
+                upload data to GPU correctly 
+                explore more shaders stages 
+
+        ------ VR binding 
+            goal:
+                render as usual, but is interactable with vr 
+                what we have:
+                    matrix computation with eigen 
+
+            ref:
+                openvr 
+                    https://github.com/ValveSoftware/openvr/blob/master/samples/hellovr_opengl/hellovr_opengl_main.cpp
+                    f: some helper functions 
+                        #include "shared/lodepng.h"            
+                            LodePNG version 20140823
+                            load png files 
+                        #include "shared/Matrices.h"
+                        #include "shared/pathtools.h"
+                    f: it uses SDL lib: Simple DirectMedia Layer
+                        provide low level access to audio, keyboard, mouse, joystick, and
+                            raphics hardware via OpenGL and Direct3D
+                    f: 
+
+                openvr in cgv 
+                    ...
+
+
+
+

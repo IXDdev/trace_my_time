@@ -1,0 +1,39 @@
+
+    structure:
+        imgui 
+        vulkan backend 
+        // flexible binding of rendering primitives 
+    req: 
+        vulkan rendering with multiple pipelines: 
+            a cube and a triangle with two shaders/ pipelines 
+            t: one with texture and the other not 
+
+        rasterizing renderers bundle 
+            point renderer 
+            triangle renderer: randomlized triangles 
+            box renderer
+            line renderer 
+            sphere renderer 
+            surfel renderer 
+            rounded cone renderer 
+            textured mesh renderer 
+            surface renderer 
+                materials, ray traced 
+            volume renderer 
+            arrow renderer 
+            ellipsoid renderer
+            tube renderer 
+
+        ray tracing renderers 
+            ref: 
+                https://github.com/SaschaWillems/Vulkan
+                https://github.com/nvpro-samples/vk_raytracing_tutorial_KHR
+                [the lake of scene: ]
+                    integrated testbed for easy accumulating: content accumulating + source accumulating! 
+                    medium level merging
+                https://github.com/Overv/VulkanTutorial
+                    glfw with vulkan ok 
+            
+        vr binding 
+            ref: 
+                openvr  
