@@ -1,0 +1,59 @@
+
+        [+]
+        [-]
+    IME 
+        +MaterialLibrary
+            Blinn-Phong material support 
+            Oren-Nayer material support 
+            ... 
+            take them from cgv 
+        Meshing, TexturedMeshRenderer
+            ok-load mesh, read its mtl files to load images, only pic dirs enough 
+                -> load file, load its textures automatically 
+            ok-bind a list of images, we have to know their name?
+            ok-gui binding 
+
+            parallel loading 
+            support mesh with more than one materials 
+                binding with diff. materials when rendering, use more vaos to support this? 
+                similar to multiple meshes.. multiple vaos, multiple vertex arrays 
+            load with openmesh? 
+            switch per-vertex color  
+            append meshes 
+            [+] realistic rendering of meshes, openmesh support, direct vertex submit (beter than understanding simple_mesh?)
+                material loading too complex! 
+            load mesh from dir 
+
+        ok-TessellationShaderTest_NormalRenderer or normal support  
+            render normal taken from NS repo 
+
+        ok-BoxRenderer 
+            ok-how did they render a box? 5
+            ok-prob: looks not good, add light, lighting solved 
+            give roations and transformations at vertex shader 
+
+            [-] cgv shader system is mature 
+                material support 
+                matrix computation ref. cgv 
+
+        ok-SurfelRenderer 
+            emit vertices in normal space 
+        other renderers can be imported later 
+        3h
+
+    Point Cloud Recon 
+        Field Aligned Meshing support 
+
+    weekly report 
+        clean points, play with points 
+            point selection 
+                ann ds, quick, realtime experience 
+            -> point classification, feed to polyFit 
+
+            -> point cleaning 
+        developed a framwork with nanogui/ nse 
+            binded with openvr and openxr 
+            load meshes with multiple materials 
+            which benefits our future research 
+            our own way of mesh rendering 
+        3h 

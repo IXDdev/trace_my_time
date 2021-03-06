@@ -37,9 +37,10 @@
             points cleaning for quick test 
             points classification 
 
-        >surface recon
+        >surface recon after cleaned 
             with realitycapture workflow 
             with Osr workflow 
+            with PolyFit workflow 
             
         model fitting 
             //add new simple mesh to the current scene: 

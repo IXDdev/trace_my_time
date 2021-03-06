@@ -7,63 +7,238 @@
     done with this fw: 
 
     req:
-        ------ PrimitiveRenderers ---------
-            // may have to use geometry shader 
-            triangle renderer: randomlized triangles 
-            point renderer 
-            clod renderer 
-            box renderer
-            line renderer 
-            sphere renderer 
-            surfel renderer 
-            rounded cone renderer 
-            textured mesh renderer 
-            surface renderer 
-                materials, ray traced 
-            volume renderer 
-            arrow renderer 
-            ellipsoid renderer
-            tube renderer 
-        
-        ------ PCL lib 
-            ok-load point cloud and count 
-            merge examples 
-                https://github.com/PointCloudLibrary/pcl/tree/master/examples
-                https://pcl.readthedocs.io/projects/tutorials/en/latest/region_growing_rgb_segmentation.html#region-growing-rgb-segmentation
-            feature vis with pcl vtk viewer 
-            openvr integration 
-            custom rendering of the clouds, ref cgv? 
+        Main Direction  
+            ------ PCL lib 
+                ok-load point cloud and count 
+                merge examples 
+                    https://github.com/PointCloudLibrary/pcl/tree/master/examples
+                    https://pcl.readthedocs.io/projects/tutorials/en/latest/region_growing_rgb_segmentation.html#region-growing-rgb-segmentation
+                feature vis with pcl vtk viewer 
+                openvr integration 
+                custom rendering of the clouds, ref cgv? 
 
-        ------ OpenCV Lib 
-            Harris2d
-            render images with the fw:
-                load shaders 
-                load textures 
-                upload data to GPU correctly 
-                explore more shaders stages 
+            ------ OpenCV Lib 
+                Harris2d
+                render images with the fw:
+                    load shaders 
+                    load textures 
+                    upload data to GPU correctly 
+                    explore more shaders stages 
 
-        ------ VR binding 
-            goal:
-                render as usual, but is interactable with vr 
-                what we have:
-                    matrix computation with eigen 
+            ------ PrimitiveRenderers ---------
+                // may have to use geometry shader 
+                triangle renderer: randomlized triangles 
+                point renderer 
+                clod renderer 
+                box renderer
+                line renderer 
+                sphere renderer 
+                surfel renderer 
+                rounded cone renderer 
+                textured mesh renderer 
+                surface renderer 
+                    materials, ray traced 
+                volume renderer 
+                arrow renderer 
+                ellipsoid renderer
+                tube renderer 
+            
+            ------ VR binding 
+                goal:
+                    render as usual, but is interactable with vr 
+                    what we have:
+                        matrix computation with eigen 
 
-            ref:
-                openvr 
-                    https://github.com/ValveSoftware/openvr/blob/master/samples/hellovr_opengl/hellovr_opengl_main.cpp
-                    f: some helper functions 
-                        #include "shared/lodepng.h"            
-                            LodePNG version 20140823
-                            load png files 
-                        #include "shared/Matrices.h"
-                        #include "shared/pathtools.h"
-                    f: it uses SDL lib: Simple DirectMedia Layer
-                        provide low level access to audio, keyboard, mouse, joystick, and
-                            raphics hardware via OpenGL and Direct3D
-                    f: 
+                ref:
+                    openvr 
+                        https://github.com/ValveSoftware/openvr/blob/master/samples/hellovr_opengl/hellovr_opengl_main.cpp
+                        f: some helper functions 
+                            #include "shared/lodepng.h"            
+                                LodePNG version 20140823
+                                load png files 
+                            #include "shared/Matrices.h"
+                            #include "shared/pathtools.h"
+                        f: it uses SDL lib: Simple DirectMedia Layer
+                            provide low level access to audio, keyboard, mouse, joystick, and
+                                raphics hardware via OpenGL and Direct3D
+                        f: 
 
-                openvr in cgv 
+                    openvr in cgv 
+                        ...
+
+            ------ Networking ------
+                ok-thread 
+                ok-socket 
+                -> a small game, controllable!
+                -> messager 
+                cloud sync objects testing 
+                    manipulate boxes on cloud 
+                admin to reset the scene
+                ondrive physics
+
+                isUpdating = true/false, try to update scene obkjects, controllers should always be updated 
+                > 1000/t = f 
+
+            ------ Physics Engine --------
+
+            ------ Animation --------
+
+        SystemView, req  
+            IMApp 
+                IMApp_Recon
+                    Vertex color to texture
+                
+                IMApp_Documentary  
+                    还原历史场景
+                
+                IMApp_DroneSimulator 
+                
+                IMApp_Crawlers
+                
+                IMApp_Calculator 
+                
+                IMApp_PlottableMath
+                    function ploting
+                
+                IMApp_Erotics
+            
+            IMGame
+                IMGame_BoxMoving 
+                    方块移动游戏
+                
+                IMGame_GreedySnake 
+                    贪吃蛇游戏
+                
+                IMGame_Tetris 
+                    俄罗斯方块
+                
+                IMGame_Go 
+                    棋类
+                
+                IMGame_Checkers
+                ...   
+                
+                IMGames_UnityPorting
+                    Unity/UE demos supporting
+                
+                IMGames_Casino 
+                
+                IMGames_Mahjong
+                
+                IMGames_NervousCat
+            
+            IMVis
+                IMVis_COVID19
+                
+                IMVis_QuantitizedArt
+                
+                IMVis_KnowledgeGraph
+                    Graph visualization
+            
+            core functions, 基础功能建设, libs-to-test
+                Kit_Anim 
                     ...
+                    merge the animation lib I made 
+
+                Kit_Physics 
+                    物理
+                    衣服模拟
+                
+                Kit_Vis 
+                    https://github.com/ethz-asl/plotty
+
+                -> Kit_Renderers
+                    Vk render test渲染器
+                    F*s =1000
+                    水的效果
+                    跟踪视觉
+                    Fake liquid
+
+                Kit_Media
+                    语音通话
+                    视频
+                    媒体交换
+                    尝试贴图, 不行用assimp
+                    HDR 
+                    渲染pdf
+                    渲染桌面
+                    Fenek, 只是用js控制渲染
+                    Webxr
+                    https://c-ares.haxx.se/
+                    V8 engine
+                    Ffmpeg
+                
+                Kit_Parallel 
+                    多线程
+                
+                kit_ML 
+                    Traditional machine learning
+                    Andrew bjon fw 
+                
+                Kit_Reasoning
+                    High performance reasoning
+                    推理系统   
+                
+                Kit_DL 
+                    深度学习
+                    车牌识别
+                    EasyPR
+                    gitee.com/lsylovews/Col
+                    face tracking 
+                    OpenGL_NeuralTexture binding 
+                
+                Kit_Vision
+                    OpenCV testing 
+                    https://github.com/ethz-asl/maplab
+
+                Kit_Autopilot
+                    robotic https://github.com/ethz-asl/ethzasl_icp_mapping
+                  
+                Kit_Hardware
+                    Hololens2 
+                    Opengl手写数字？
+                    抖音，手机adb上传
+                    https://github.com/nmeum/android-tools/releases
+                    Libusb
+                    https://github.com/prife/adb
+                    https://github.com/prife/adb/blob/master/CMakeLists.txt
+                    https://github.com/openatx/adb-binaries
+                    latex support
+                
+                Kit_Networking
+                    Json support
+                    Restful api
+                    V8 engine
+                        https://github.com/v8/v8/blob/master/samples/hello-world.cc
+                        直接用编译好的
+                    https://gitlab.com/eidheim/Simple-Web-Server
+                    https://github.com/apache/httpd
+                
+                Kit_DataBase
+                    操作数据库
+                    Leveldb
+                
+                Kit_DataSecurity 
+                    qr code scan/ gen 
+                    guid code gen 
+                    checksum compute 
+                    zip 
+                    ...
+                
+                -> Kit_DataPrepare
+                    https://github.com/ethz-asl/libowlcpp
+                    https://github.com/ramenhut/simple-rdf
+
+                -> Kit_Interaction 
+                    vr interaction kit 
+
+            libtest_xxx 
+
+        Not-So-Large
+            scanning, and get high resolution textures 
+            
+
+
 
 
 
